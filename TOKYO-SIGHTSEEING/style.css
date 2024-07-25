@@ -1,0 +1,143 @@
+/* style.css */
+
+/* グローバルスタイル */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 90px;
+  line-height: 1.6;
+}
+
+header {
+  width: 100%; /* 幅いっぱいを指定 */
+  height: 90px; /* 高さを50pxに指定 */
+  background: #CCC; /* 背景色にグレーを指定 */
+  padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+  box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+  position: fixed; /* ウィンドウを基準に画面に固定 */
+  top: 0; /* 上下の固定位置を上から0pxにする */
+  left: 0; /* 左右の固定位置を左から0pxにする */
+  display: flex; /* 中の要素を横並びにする */
+  align-items: center; /* 中の要素を上下中央に並べる */
+}
+
+header a {
+  text-decoration: none;
+  color: rgb(215, 243, 58);
+  box-shadow: 0 0 8px yellow;
+}
+
+main {
+  padding: 20px;
+  margin-top: 80px; /* ヘッダーの高さ分のマージンを追加 */
+  z-index: 1;
+}
+footer {
+  background: #c0c0c0;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  bottom: 0;
+}
+
+/* スマホ用スタイル */
+@media (max-width: 600px) {
+  header {
+    width: 100%; /* 幅いっぱいを指定 */
+    height: 150px; /* 高さを50pxに指定 */
+    background: orange; /* 背景色にグレーを指定 */
+    padding: 30px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    display: flex; /* 中の要素を横並びにする */
+    align-items: center; /* 中の要素を上下中央に並べる */
+    justify-content: space-between;
+
+  }
+
+  header h3 {
+    color: rgb(225, 235, 33);
+    animation-name: light;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes light {
+    25% {
+      color: rgb(220, 231, 19);
+    }
+    50% {
+      color: rgb(215, 221, 107);
+    }
+    75% {
+      color: rgb(208, 212, 120);
+    }
+  }
+
+  header a {
+    text-decoration: none;
+    color: rgb(215, 243, 58);
+    box-shadow: 0 0 8px yellow;
+    transition-property: transform;
+    transition-duration: 0.5s;
+  }
+
+  header a:hover {
+    font-weight: bold;
+    transform: scale(1.05);
+  }
+
+  main {
+    margin-top: 20px; /* ヘッダーの高さ分のマージンを増やす */
+  }
+
+  .prospect p {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .setlist {
+    color:rgb(104, 53, 53);
+  }
+
+  .music {
+    display: flex;
+    background: rgba(198, 193, 193, 0.13);
+    margin: 4px 0;
+    gap: 16px;
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+
+  .music:hover {
+    background: rgba(157, 112, 48, 0.13);
+    transform: scale(1.05);
+  }
+
+  .music + .music {
+    border-top: 1.5px solid orange;
+  }
+
+  .music p {
+    padding: 0 10px;
+  }
+
+  .title {
+    color:rgb(58, 9, 55)
+  }
+
+  .music img {
+    height: 56px;
+    width: 56px;  /*できない(´;ω;｀)*/
+    margin: auto 0;
+  }
+
+  .mc p {
+    color:rgb(60, 125, 62);
+  }
+
+
+}
